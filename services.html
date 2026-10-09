@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Pricing — 119 LAUNDRY & Dry Cleaning</title>
+  <meta name="description" content="Simple, transparent laundry pricing. Wash & Fold at ₹119/kg, Wash & Iron at ₹189/kg, and specialized Dry Cleaning. Guaranteed 24-hour turnaround with doorstep pickup & delivery.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Theme Init (Prevents FOUC) -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('119_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Top Announcement & Quick Contact Bar -->
+  <aside class="top-bar" aria-label="Announcement bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          ⚡ FREE Pickup & Delivery within 15 km • Ready in 24 Hours
+        </span>
+        <span class="top-pill" style="opacity: 0.9;">
+          📍 Near Rathinam College, Eechanari, Coimbatore
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+917639556677" class="top-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          +91 76395 56677
+        </a>
+        <a href="https://wa.me/917639556677?text=Hi%20119%20Laundry,%20I'd%20like%20to%20inquire%20about%20your%20pricing" target="_blank" rel="noopener noreferrer" class="top-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+          </svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container navbar">
+      <!-- Master Logo: Dual for Light & Dark Themes -->
+      <a href="index.html" class="brand-logo" aria-label="119 LAUNDRY & Dry Cleaning Home">
+        <img src="images/logo.svg" alt="119 LAUNDRY & Dry Cleaning" class="logo-light" width="220" height="50">
+        <img src="images/logo-white.svg" alt="119 LAUNDRY & Dry Cleaning" class="logo-dark" width="220" height="50">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link active">Services & Pricing</a>
+        <a href="membership-contact.html#membership" class="nav-link">Membership</a>
+        <a href="membership-contact.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop Primary CTA & Theme Toggle -->
+      <div class="nav-actions">
+        <!-- Theme Toggle Switch -->
+        <button class="theme-toggle-btn" aria-label="Switch to dark theme" title="Switch theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="tel:+917639556677" class="btn btn-outline" style="padding: 0.65rem 1.15rem; font-size: 0.875rem;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Call Us
+        </a>
+        <a href="membership-contact.html#pickup-form" class="btn btn-primary" id="headerScheduleBtn">
+          Schedule a Pickup
+        </a>
+      </div>
+
+      <!-- Mobile Actions (Theme Switcher + Hamburger Toggle) -->
+      <div class="mobile-actions">
+        <button class="theme-toggle-btn" aria-label="Switch to dark theme" title="Switch theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-overlay" aria-hidden="true"></div>
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Menu">
+    <div style="margin-bottom: 1.5rem;">
+      <a href="index.html" class="brand-logo" aria-label="119 LAUNDRY">
+        <img src="images/logo.svg" alt="119 LAUNDRY" class="logo-light" style="height: 38px;">
+        <img src="images/logo-white.svg" alt="119 LAUNDRY" class="logo-dark" style="height: 38px;">
+      </a>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; font-weight: 600;">
+        Get Your Clothes Washed Within 24 Hours
+      </p>
+    </div>
+
+    <!-- Mobile Drawer Theme Mode Switcher -->
+    <div class="drawer-theme-row">
+      <div class="drawer-theme-label">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M12 2a10 10 0 0 0 0 20z" fill="currentColor"></path>
+        </svg>
+        <span>Appearance</span>
+      </div>
+      <button class="theme-toggle-btn" aria-label="Switch to dark theme" title="Switch theme">
+        <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="services.html" class="mobile-nav-link active">Services & Pricing</a></li>
+      <li><a href="membership-contact.html#membership" class="mobile-nav-link">Membership</a></li>
+      <li><a href="membership-contact.html#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-cta">
+      <a href="membership-contact.html#pickup-form" class="btn btn-primary btn-block">Schedule a Pickup</a>
+      <a href="tel:+917639556677" class="btn btn-outline btn-block">Call: +91 76395 56677</a>
+      <a href="https://wa.me/917639556677" target="_blank" class="btn btn-whatsapp btn-block">WhatsApp Us</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         PAGE HEADER
+         ========================================================================== -->
+    <section class="section-sm bg-light" style="border-bottom: 1px solid var(--border-color); padding-top: 4rem; padding-bottom: 3.5rem;">
+      <div class="container text-center">
+        <span class="section-badge">Transparent & Fair</span>
+        <h1 class="section-title" style="font-size: 3rem; margin-bottom: 1rem;">
+          Simple Pricing. Professional Care.
+        </h1>
+        <p class="section-subtitle" style="font-size: 1.25rem; margin-bottom: 0;">
+          No complicated laundry pricing. Choose the service that works for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3 VISUALLY DISTINCT PRICING CARDS
+         ========================================================================== -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="pricing-page-grid">
+          
+          <!-- Card 1: Wash & Fold (₹119/kg) -->
+          <div class="pricing-card" id="washFoldCard">
+            <div class="pricing-header">
+              <h2 class="pricing-title">Wash & Fold</h2>
+              <div class="pricing-amount-wrap">
+                <span class="pricing-currency">₹</span>
+                <span class="pricing-amount">119</span>
+                <span class="pricing-unit">/kg</span>
+              </div>
+              <p class="pricing-desc">
+                Perfect for casual tees, shorts, towels, bedsheets, and undergarments folded to perfection.
+              </p>
+            </div>
+
+            <div style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--primary-navy); letter-spacing: 0.05em; margin-bottom: 0.75rem;">
+              Includes:
+            </div>
+            <div class="pricing-features">
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Washing:</strong> Fabric-softening sanitizing wash</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Drying:</strong> Complete hygienic drying</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Professional folding:</strong> Precision compact folds</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Neat packing:</strong> Moisture-resistant bag pack</span>
+              </div>
+            </div>
+
+            <a href="membership-contact.html?service=wash-fold#pickup-form" class="btn btn-navy btn-block">
+              Choose Wash & Fold
+            </a>
+          </div>
+
+          <!-- Card 2: Wash & Iron (Signature ₹189/kg) -->
+          <div class="pricing-card featured" id="washIronCard">
+            <span class="card-ribbon">Most Popular • 119 Signature</span>
+            <div class="pricing-header">
+              <h2 class="pricing-title">Wash & Iron</h2>
+              <div class="pricing-amount-wrap">
+                <span class="pricing-currency">₹</span>
+                <span class="pricing-amount">189</span>
+                <span class="pricing-unit">/kg</span>
+              </div>
+              <p class="pricing-desc">
+                Ideal for everyday office wear, shirts, trousers, and linens that require crisp steam press.
+              </p>
+            </div>
+
+            <div style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--primary-navy); letter-spacing: 0.05em; margin-bottom: 0.75rem;">
+              Includes:
+            </div>
+            <div class="pricing-features">
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Washing:</strong> Deep sanitized cleaning</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Drying:</strong> Temperature-controlled tumble dry</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Professional ironing:</strong> Crisp wrinkle-free press</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Neat packing:</strong> Wardrobe & hanger ready</span>
+              </div>
+            </div>
+
+            <a href="membership-contact.html?service=wash-iron#pickup-form" class="btn btn-primary btn-block">
+              Choose Wash & Iron
+            </a>
+          </div>
+
+          <!-- Card 3: Dry Cleaning (Contact us for pricing) -->
+          <div class="pricing-card dry-cleaning-card" id="dryCleaningCard">
+            <div class="pricing-header">
+              <h2 class="pricing-title">Dry Cleaning</h2>
+              <div style="margin: 1.5rem 0 1rem; padding: 0.75rem 1rem; background-color: var(--bg-subtle); border-radius: var(--radius-md);">
+                <span style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800; color: var(--primary-navy);">
+                  Contact us for pricing
+                </span>
+              </div>
+              <p class="pricing-desc">
+                Professional care for garments that require special cleaning.
+              </p>
+            </div>
+
+            <div style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--primary-navy); letter-spacing: 0.05em; margin-bottom: 0.75rem;">
+              Care Highlights:
+            </div>
+            <div class="pricing-features">
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Suits, blazers, tuxedo & formal jackets</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Silk sarees, lehengas & embroidered ethnic wear</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Woolen coats, sweaters & delicate shawls</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Stain inspection & eco-friendly solvents</span>
+              </div>
+            </div>
+
+            <a href="membership-contact.html?service=dry-cleaning#pickup-form" class="btn btn-outline btn-block">
+              Inquire for Dry Cleaning
+            </a>
+          </div>
+
+        </div>
+
+        <!-- ==========================================================================
+             INTERACTIVE LAUNDRY LOAD & ESTIMATE CALCULATOR
+             ========================================================================== -->
+        <div class="calc-container" id="laundryCalculator">
+          <div class="calc-grid">
+            <div>
+              <span class="section-badge">Instant Cost Estimator</span>
+              <h3 style="font-size: 1.85rem; font-weight: 800; color: var(--primary-navy); margin-bottom: 0.5rem;">
+                Estimate Your Laundry Cost
+              </h3>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                Select your service and move the slider to see your transparent cost estimation.
+              </p>
+
+              <!-- Service Switcher -->
+              <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                <label style="display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 700; color: var(--primary-navy);">
+                  <input type="radio" name="calcService" value="189" data-service-key="wash-iron" checked style="accent-color: var(--primary-blue); transform: scale(1.2);">
+                  Wash & Iron (₹189/kg) <span style="font-size: 0.72rem; background: var(--primary-blue); color: #fff; padding: 0.15rem 0.55rem; border-radius: var(--radius-full); font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em;">Signature</span>
+                </label>
+                <label style="display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 700; color: var(--primary-navy);">
+                  <input type="radio" name="calcService" value="119" data-service-key="wash-fold" style="accent-color: var(--primary-blue); transform: scale(1.2);">
+                  Wash & Fold (₹119/kg)
+                </label>
+              </div>
+
+              <!-- Quick Presets -->
+              <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                <span style="font-size: 0.825rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Quick Presets:</span>
+                <button type="button" class="calc-preset-chip active" data-weight="4" style="background: var(--bg-subtle); border: 1px solid var(--border-color); padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.825rem; font-weight: 600; cursor: pointer;">Single (~4 kg)</button>
+                <button type="button" class="calc-preset-chip" data-weight="7" style="background: var(--bg-subtle); border: 1px solid var(--border-color); padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.825rem; font-weight: 600; cursor: pointer;">Couple (~7 kg)</button>
+                <button type="button" class="calc-preset-chip" data-weight="12" style="background: var(--bg-subtle); border: 1px solid var(--border-color); padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.825rem; font-weight: 600; cursor: pointer;">Family Weekly (~12 kg)</button>
+              </div>
+
+              <!-- Weight Slider -->
+              <div class="calc-slider-wrap">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <span style="font-weight: 700; color: var(--primary-navy);">Estimated Weight:</span>
+                  <span id="calcWeightVal" style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 900; color: var(--primary-blue);">4 kg</span>
+                </div>
+                <input type="range" id="calcWeight" class="calc-slider" min="2" max="25" step="1" value="4">
+                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem;">
+                  <span>2 kg (Min)</span>
+                  <span>10 kg</span>
+                  <span>25 kg</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price Result Column -->
+            <div class="calc-result-box">
+              <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94A3B8; font-weight: 700;">Estimated Cost</span>
+              <div class="calc-result-price" id="calcTotalPrice">₹756</div>
+              <p style="font-size: 0.85rem; color: #CBD5E1; margin-bottom: 1.5rem;">
+                Includes washing, drying, press/fold, and 24-hour doorstep delivery.
+              </p>
+              <a href="membership-contact.html#pickup-form" id="bookCalcBtn" class="btn btn-primary btn-block">
+                Book This Load
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PICKUP & DELIVERY DEDICATED SECTION
+         ========================================================================== -->
+    <section class="section bg-light" id="pickupDelivery">
+      <div class="container">
+        <div class="hero-grid" style="align-items: center;">
+          <div class="hero-content">
+            <span class="section-badge">Doorstep Service</span>
+            <h2 class="section-title">
+              Doorstep Pickup & Delivery
+            </h2>
+            <p class="hero-desc">
+              Pickup and delivery are crafted for customer convenience. You don't have to carry heavy laundry bags to the local shop or wait in lines. Our delivery team arrives with digital weighing scales and sanitized bags right at your preferred time slot.
+            </p>
+
+            <div style="background: rgba(37, 99, 235, 0.08); border: 2px dashed var(--primary-blue); padding: 0.85rem 1.15rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem;">
+              <span style="font-size: 1.5rem;">🚚</span>
+              <div>
+                <strong style="color: var(--primary-blue); font-size: 0.95rem; display: block;">100% FREE Pickup & Delivery (Within 15 km)</strong>
+                <span style="font-size: 0.85rem; color: var(--text-secondary);">Enjoy free doorstep pickup & delivery within a 15 km radius around our hub near Rathinam College, Eechanari, Coimbatore.</span>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+              <div style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-navy); color: #FFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--primary-navy);">Digital Doorstep Weighing</h4>
+                  <p style="font-size: 0.9rem; color: var(--text-secondary);">Your laundry is weighed in front of you with an exact digital scale for 100% transparency.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-navy); color: #FFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--primary-navy);">Flexible Morning & Evening Slots</h4>
+                  <p style="font-size: 0.9rem; color: var(--text-secondary);">Choose morning (8 AM – 11 AM), afternoon (12 PM – 4 PM), or evening (5 PM – 8 PM) to match your work schedule.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-navy); color: #FFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--primary-navy);">Safe & Hygienic Packaging</h4>
+                  <p style="font-size: 0.9rem; color: var(--text-secondary);">Clean clothes are packed in sealed garment bags to shield against dust and humidity during transit.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="membership-contact.html#pickup-form" class="btn btn-primary btn-lg" id="pickupSectionBtn">
+              Schedule a Pickup
+            </a>
+          </div>
+
+          <!-- Pickup Visual / Photography -->
+          <div class="hero-media-wrapper">
+            <div class="hero-image-frame">
+              <img 
+                src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1000&q=80" 
+                alt="Modern hygienic commercial laundromat with stainless steel washing machines"
+                loading="lazy"
+                width="600"
+                height="510"
+              >
+            </div>
+            <div class="floating-badge badge-bottom-right" style="position: absolute;">
+              <div class="badge-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="badge-text-title">100% Care Guarantee</div>
+                <div class="badge-text-subtitle">Zero Lost Garment Policy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ SECTION (Accordion)
+         ========================================================================== -->
+    <section class="section" id="faqSection">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Everything you need to know about our services, pricing by weight, and turnaround times.
+          </p>
+        </div>
+
+        <div class="faq-wrap">
+          <!-- Question 1 -->
+          <div class="faq-item active">
+            <button class="faq-question" aria-expanded="true">
+              <span>How long does laundry take?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Our standard service guarantees delivery within <strong>24 hours</strong>! If we collect your clothes on Monday morning, they will be delivered back clean, pressed, and neatly packed by Tuesday morning.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you provide pickup and delivery?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! We provide <strong>100% FREE doorstep pickup and delivery within a 15 km radius</strong> around our facility near Rathinam College, Eechanari, Coimbatore. You can choose from convenient morning, afternoon, or evening slots when you schedule your pickup online or via WhatsApp.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How is laundry charged by weight?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Our pricing is simple and transparent: <strong>Wash & Fold is ₹119/kg</strong> and <strong>Wash & Iron is ₹189/kg</strong>. Your laundry is weighed on calibrated digital scales at pickup or arrival at our facility. There is no complicated per-piece itemization for regular everyday laundry.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you offer dry cleaning?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, we offer professional dry cleaning for garments requiring specialized fabric care, including suits, blazers, silk sarees, lehengas, and woolen coats. Please contact us or select "Dry Cleaning" on the pickup form for exact garment itemization and quotation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I schedule regular pickups?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Absolutely! Many of our working professionals and families have standing weekly or bi-weekly pickups. Simply mention your preferred recurring schedule in the special instructions or join our upcoming membership program.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does membership work?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Our membership program is designed for customers who use 119 Laundry regularly. It provides member-only discounted pricing, priority turnaround, reserved weekly slots, and exclusive seasonal offers. Membership plans are launching soon, and you can join the early-access waitlist today!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Bar -->
+    <section class="section-sm bg-navy">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+        <div>
+          <h3 style="color: #FFF; font-size: 1.85rem; font-weight: 800; margin-bottom: 0.35rem;">Ready for Fresh, Clean Clothes?</h3>
+          <p style="color: #93C5FD; font-size: 1rem;">Experience convenient doorstep laundry with 24-hour turnaround.</p>
+        </div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="membership-contact.html#pickup-form" class="btn btn-primary btn-lg">Schedule a Pickup</a>
+          <a href="tel:+917639556677" class="btn btn-outline-white btn-lg">Call: +91 76395 56677</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="119 LAUNDRY">
+            <img src="images/logo-white.svg" alt="119 LAUNDRY & Dry Cleaning" width="220" height="50">
+          </a>
+          <p class="footer-brand-tagline">
+            Get Your Clothes Washed Within 24 Hours
+          </p>
+          <p class="footer-desc">
+            Modern, hygienic, and reliable laundry & dry cleaning service. Designed for working professionals, busy households, and everyday convenience.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://facebook.com" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://twitter.com" class="social-btn" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="https://wa.me/917639556677" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="services.html" class="footer-link">Services & Pricing</a></li>
+            <li><a href="membership-contact.html#membership" class="footer-link">Membership</a></li>
+            <li><a href="membership-contact.html#pickup-form" class="footer-link">Pickup Request</a></li>
+            <li><a href="membership-contact.html#contact" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#washIronCard" class="footer-link">Wash & Iron (₹189/kg) • Signature</a></li>
+            <li><a href="#washFoldCard" class="footer-link">Wash & Fold (₹119/kg)</a></li>
+            <li><a href="#dryCleaningCard" class="footer-link">Specialty Dry Cleaning</a></li>
+            <li><a href="#pickupDelivery" class="footer-link">Doorstep Collection</a></li>
+            <li><a href="#faqSection" class="footer-link">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact & Location</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #CBD5E1;">
+            <strong>Store Address:</strong><br>
+            119 Laundry & Dry Cleaning,<br>
+            Near Rathinam College, Eechanari,<br>
+            Coimbatore - 641021
+          </p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.75rem; color: #93C5FD; font-weight: 700;">
+            🚚 Free Pickup & Delivery (Within 15 km)
+          </p>
+          <p style="font-size: 0.9rem; margin-bottom: 0.75rem; color: #CBD5E1;">
+            <strong>Hours:</strong><br>
+            Mon – Sun: 7:00 AM – 9:00 PM<br>
+            Pickup & Delivery: 8:00 AM – 8:00 PM
+          </p>
+          <p style="font-size: 0.9rem; color: #CBD5E1;">
+            <strong>Phone / WhatsApp:</strong><br>
+            <a href="tel:+917639556677" style="color: #60A5FA;">+91 76395 56677</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2026 119 LAUNDRY & Dry Cleaning. All rights reserved.
+        </p>
+        <div class="footer-badges">
+          <span class="footer-trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            24-Hour Guarantee
+          </span>
+          <span class="footer-trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Eco-Safe Detergents
+          </span>
+          <span class="footer-trust-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Fabric Care Promise
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick WhatsApp Action Button -->
+  <a href="https://wa.me/917639556677?text=Hi%20119%20Laundry,%20I%20would%20like%20to%20schedule%20a%20pickup" class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with 119 Laundry on WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+    </svg>
+    <span class="floating-whatsapp-tooltip">Chat with us on WhatsApp</span>
+  </a>
+
+  <!-- Supabase Database Integration -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

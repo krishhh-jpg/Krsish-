@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supabase Connectivity Diagnostic | 119 Laundry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: #0B132B;
+      color: #E2E8F0;
+      min-height: 100vh;
+      padding: 2.5rem 1rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .test-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .header-panel {
+      background: linear-gradient(135deg, #1C2541 0%, #0F172A 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .badge-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid #10B981;
+      color: #34D399;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-live::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background-color: #10B981;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+    .config-table {
+      width: 100%;
+      margin-top: 1.25rem;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .config-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .config-table td:first-child {
+      font-weight: 600;
+      color: #94A3B8;
+      width: 180px;
+    }
+    .config-table code {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      color: #38BDF8;
+      font-family: monospace;
+      font-size: 0.85rem;
+    }
+    .test-card {
+      background: #111C38;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      transition: all 0.2s ease;
+    }
+    .test-card.passed {
+      border-left: 4px solid #10B981;
+    }
+    .test-card.failed {
+      border-left: 4px solid #EF4444;
+    }
+    .test-card.pending {
+      border-left: 4px solid #F59E0B;
+    }
+    .test-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .test-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #F8FAFC;
+    }
+    .status-pill {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .status-pill.pass {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34D399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+    .status-pill.fail {
+      background: rgba(239, 68, 68, 0.2);
+      color: #F87171;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+    .status-pill.wait {
+      background: rgba(245, 158, 11, 0.2);
+      color: #FBBF24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+    .test-msg {
+      font-size: 0.9rem;
+      color: #CBD5E1;
+      line-height: 1.5;
+    }
+    .test-meta {
+      font-size: 0.78rem;
+      color: #64748B;
+      margin-top: 0.4rem;
+    }
+    .action-bar {
+      display: flex;
+      gap: 1rem;
+      margin: 2rem 0;
+      align-items: center;
+    }
+    .btn-run {
+      background: #2563EB;
+      color: white;
+      font-weight: 700;
+      padding: 0.75rem 1.75rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.2s ease;
+      font-family: inherit;
+    }
+    .btn-run:hover {
+      background: #1D4ED8;
+    }
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: transparent;
+      color: #E2E8F0;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+    .summary-card {
+      background: #1E293B;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .summary-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: #F8FAFC;
+    }
+    .alert-box {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+      color: #FCA5A5;
+      font-size: 0.9rem;
+    }
+    .sql-code {
+      background: #030712;
+      color: #A7F3D0;
+      padding: 1rem;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      overflow-x: auto;
+      margin-top: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <div class="header-panel">
+      <div class="badge-live">Diagnostic Suite</div>
+      <h1 style="font-family: 'Outfit', sans-serif; font-size: 2rem; margin: 0 0 0.5rem 0;">Supabase Database Connectivity Test</h1>
+      <p style="color: #94A3B8; margin: 0; font-size: 0.95rem;">
+        Testing application architecture integration with Supabase for 119 Laundry.
+      </p>
+
+      <table class="config-table">
+        <tr>
+          <td>Project URL:</td>
+          <td><code id="cfgUrl">https://rppeksgujbmiuhkhluqd.supabase.co</code></td>
+        </tr>
+        <tr>
+          <td>Publishable Key:</td>
+          <td><code id="cfgKey">sb_publishable_QaYbe...Yiny</code></td>
+        </tr>
+        <tr>
+          <td>Client Status:</td>
+          <td id="cfgStatus"><span class="status-pill wait">Testing...</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="action-bar">
+      <button class="btn-run" id="btnRerun" onclick="executeTestSuite()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+        Run All Diagnostics
+      </button>
+      <a href="index.html" class="btn-outline">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Website
+      </a>
+    </div>
+
+    <div id="testItemsContainer">
+      <!-- Injected dynamically -->
+    </div>
+
+    <div class="summary-card" id="summaryCard" style="display: none;">
+      <div class="summary-title" id="summaryHeading">Diagnostic Results Summary</div>
+      <p id="summaryText" style="margin: 0; color: #94A3B8; font-size: 0.95rem;"></p>
+      
+      <div id="solutionBox" style="display: none;">
+        <div class="alert-box">
+          <strong>Database Schema / Permission Note:</strong><br>
+          If Table Read or Table Write indicates <code>PGRST205 (table not found in cache)</code> or permission error, run the following SQL script in your <a href="https://supabase.com/dashboard/project/rppeksgujbmiuhkhluqd/sql/new" target="_blank" style="color: #60A5FA; text-decoration: underline;">Supabase SQL Editor</a>:
+        </div>
+        <pre class="sql-code">-- 1. Create table if not present
+create table if not exists public.pickups (
+  id bigint generated always as identity primary key,
+  booking_ref text not null,
+  full_name text not null,
+  phone text not null,
+  address text not null,
+  service text not null,
+  estimated_weight text,
+  pickup_date text,
+  pickup_time text,
+  notes text,
+  status text default 'pending',
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- 2. Grant table permissions to anon & authenticated
+grant usage on schema public to anon, authenticated;
+grant all on table public.pickups to anon, authenticated;
+
+-- 3. Enable RLS and setup all CRUD policies for anonymous clients
+alter table public.pickups enable row level security;
+
+create policy "Allow anon insert" on public.pickups for insert to anon with check (true);
+create policy "Allow anon select" on public.pickups for select to anon using (true);
+create policy "Allow anon update" on public.pickups for update to anon using (true);
+create policy "Allow anon delete" on public.pickups for delete to anon using (true);
+
+-- 4. Reload PostgREST schema cache
+notify pgrst, 'reload schema';</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+
+  <script>
+    async function executeTestSuite() {
+      const container = document.getElementById('testItemsContainer');
+      const cfgStatus = document.getElementById('cfgStatus');
+      const summaryCard = document.getElementById('summaryCard');
+      const summaryHeading = document.getElementById('summaryHeading');
+      const summaryText = document.getElementById('summaryText');
+      const solutionBox = document.getElementById('solutionBox');
+      const rerunBtn = document.getElementById('btnRerun');
+
+      rerunBtn.disabled = true;
+      rerunBtn.innerHTML = 'Running Diagnostics...';
+
+      container.innerHTML = `
+        <div class="test-card pending">
+          <div class="test-header">
+            <span class="test-title">Executing Test Suite...</span>
+            <span class="status-pill wait">IN PROGRESS</span>
+          </div>
+          <div class="test-msg">Interacting with Supabase endpoint at https://rppeksgujbmiuhkhluqd.supabase.co...</div>
+        </div>
+      `;
+
+      try {
+        if (!window.SupabaseService || typeof window.SupabaseService.runConnectivityTests !== 'function') {
+          throw new Error('SupabaseService test suite not loaded in js/supabase.js');
+        }
+
+        const report = await window.SupabaseService.runConnectivityTests();
+        
+        // Update client status badge
+        if (window.SupabaseService.isReady()) {
+          cfgStatus.innerHTML = '<span class="status-pill pass">CONNECTED</span>';
+        } else {
+          cfgStatus.innerHTML = '<span class="status-pill fail">FAILED</span>';
+        }
+
+        // Render cards
+        let html = '';
+        report.tests.forEach(t => {
+          const statusClass = t.passed ? 'passed' : 'failed';
+          const pillClass = t.passed ? 'pass' : 'fail';
+          const pillText = t.passed ? 'PASS' : 'FAIL';
+
+          html += `
+            <div class="test-card ${statusClass}">
+              <div class="test-header">
+                <span class="test-title">${t.id}. ${t.title}</span>
+                <span class="status-pill ${pillClass}">${pillText}</span>
+              </div>
+              <div class="test-msg">${escapeHtml(t.message)}</div>
+              <div class="test-meta">Latency: ${t.durationMs}ms</div>
+            </div>
+          `;
+        });
+        container.innerHTML = html;
+
+        // Render summary
+        summaryCard.style.display = 'block';
+        if (report.allPassed) {
+          summaryHeading.innerHTML = `✅ All ${report.summary.total} Diagnostics Passed (${report.summary.passed}/${report.summary.total})`;
+          summaryHeading.style.color = '#34D399';
+          summaryText.innerHTML = 'Supabase client initialized, schema queries succeeded, and all CRUD (Insert, Read, Update, Delete) operations completed with zero residual test data.';
+          solutionBox.style.display = 'none';
+        } else {
+          summaryHeading.innerHTML = `⚠️ Diagnostic Completed: ${report.summary.passed}/${report.summary.total} Passed (${report.summary.failed} Failed)`;
+          summaryHeading.style.color = '#F87171';
+          summaryText.innerHTML = 'One or more database operations encountered an error. Check the details above and apply the schema/permission fix below if needed.';
+          solutionBox.style.display = 'block';
+        }
+
+        // Expose report globally for headless verification
+        window.latestTestReport = report;
+
+      } catch (err) {
+        container.innerHTML = `
+          <div class="test-card failed">
+            <div class="test-header">
+              <span class="test-title">Execution Error</span>
+              <span class="status-pill fail">ERROR</span>
+            </div>
+            <div class="test-msg">${err.message}</div>
+          </div>
+        `;
+      } finally {
+        rerunBtn.disabled = false;
+        rerunBtn.innerHTML = `
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+          Run All Diagnostics
+        `;
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // Auto-execute on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      executeTestSuite();
+    });
+  </script>
+</body>
+</html>

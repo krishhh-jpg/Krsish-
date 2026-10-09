@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- 119 Favicon & Brand Mark -->
+  <rect width="64" height="64" rx="16" fill="#0A1E3F" />
+  <circle cx="32" cy="32" r="23" stroke="#1D4ED8" stroke-width="3.5" fill="#0F172A" />
+  <text x="32" y="38" font-family="'Outfit', system-ui, sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.5">119</text>
+  <path d="M 45 13 L 46.5 17.5 L 51 19 L 46.5 20.5 L 45 25 L 43.5 20.5 L 39 19 L 43.5 17.5 Z" fill="#38BDF8" />
+  <circle cx="18" cy="46" r="2" fill="#60A5FA" opacity="0.8" />
+</svg>
